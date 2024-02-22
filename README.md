@@ -17,19 +17,7 @@
 - [Splunk](https://www.splunk.com/) Splunk is an innovative technology which searches and indexes application/system log files and helps organizations derive insights from the data.
 
 # Jenkins Complete CI/CD Pipeline Environment Setup Runbook
-1) Create a GitHub Repository with the name `Jenkins-CICD-Project` and push the code in this branch(main) to 
-    your remote repository (your newly created repository). 
-    - Go to GitHub (github.com)
-    - Login to your GitHub Account
-    - Create a Repository called "Jenkins-CICD-Project"
-    - Clone the Repository in the "Repository" directory/folder in your local
-    - Download the code in in this repository "Main branch": https://github.com/awanmbandi/realworld-cicd-pipeline-project.git
-    - Unzip the code/zipped file
-    - Copy and Paste everything from the zipped file into the repository you cloned in your local
-    - Add the code to git, commit and push it to your upstream branch "main or master"
-    - Confirm that the code exist on GitHub
-
-2) Jenkins/Maven/Ansible
+1) Jenkins/Maven/Ansible
     - Create an Amazon Linux 2 VM instance 
     - Name: Jenkins/Maven/Ansible
     - Instance type: t2.medium
@@ -38,7 +26,7 @@
     - User data (Copy the following user data): https://github.com/awanmbandi/realworld-cicd-pipeline-project/blob/maven-nexus-sonarqube-jenkins-install/jenkins-install.sh
     - Launch Instance
 
-3) SonarQube
+2) SonarQube
     - Create an Create an Ubuntu 20.04 VM instance 
     - Name: SonarQube
     - Instance type: t2.medium
@@ -47,7 +35,7 @@
     - User data (Copy the following user data): https://github.com/awanmbandi/realworld-cicd-pipeline-project/blob/maven-nexus-sonarqube-jenkins-install/sonarqube-install.sh
     - Launch Instance
 
-4) Nexus
+3) Nexus
     - Create an Amazon Linux 2 VM instance 
     - Name: Nexus
     - Instance type: t2.medium
@@ -56,7 +44,7 @@
     - User data (Copy the following user data): https://github.com/awanmbandi/realworld-cicd-pipeline-project/blob/maven-nexus-sonarqube-jenkins-install/nexus-install.sh
     - Launch Instance
 
-5) EC2 (Dev/Stage/Prod)
+4) EC2 (Dev/Stage/Prod)
     - Create 3 Amazon Linux 2 VM instance
     - Names: Dev-Env, Stage-Env and Prod-Env
     - Number: `3`
@@ -66,7 +54,7 @@
     - User data (Copy the following user data): https://github.com/awanmbandi/realworld-cicd-pipeline-project/blob/tomcat-splunk-installation/tomcat-ssh-configure.sh
     - Launch Instance
 
-6) Prometheus
+5) Prometheus
     - Create an Ubuntu 20.04 VM instance 
     - Name: Prometheus
     - Instance type: t2.micro
@@ -74,7 +62,7 @@
     - Key pair: Select or create a new keypair
     - Launch Instance
 
-7) Grafana
+6) Grafana
     - Create an Ubuntu 20.04 VM instance
     - Name: Grafana
     - Instance type: t2.micro
@@ -82,7 +70,7 @@
     - Key pair: Select or create a new keypair
     - Launch Instance
 
-8) EC2 (Splunk)
+7) EC2 (Splunk)
     - Create an Amazon Linux 2 VM instance
     - Name: Splunk-Indexer
     - Instance type: t2.large
@@ -93,7 +81,7 @@
 #### NOTE: Confirm and make sure you have a total of 8 VM instances
 ![PipelineEnvSetup!](https://github.com/awanmbandi/realworld-cicd-pipeline-project/raw/zdocs/images/Screen%20Shot%202023-04-26%20at%202.51.21%20PM.png)
 
-9) Slack 
+8) Slack 
     - Go to the bellow Workspace and create a Private Slack Channel and name it "yourfirstname-jenkins-cicd-pipeline-alerts"
     - Link: https://join.slack.com/t/jjtechtowerba-zuj7343/shared_invite/zt-24mgawshy-EhixQsRyVuCo8UD~AbhQYQ  
       - You can either join through the browser or your local Slack App
